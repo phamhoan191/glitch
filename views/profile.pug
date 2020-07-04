@@ -1,0 +1,7 @@
+extends ./layouts/common
+
+block content
+  img(src= user.avatarUrl ? user.avatarUrl : "https://res.cloudinary.com/dxuvh5pyg/image/upload/v1587441246/sample.jpg", width="64")
+  span= user.name
+  span &nbsp
+  a(href="/profile/avatar") Sửa

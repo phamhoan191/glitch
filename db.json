@@ -1,0 +1,100 @@
+{
+  "books": [
+    {
+      "name": "One piece",
+      "description": "Đảo hải tặc",
+      "id": "EHjWFfTRD",
+      "quantity": 1
+    },
+    {
+      "name": "Onepunch-Man",
+      "description": "Đấm phát chết luôn",
+      "id": "PbYafUIzO",
+      "quantity": 1
+    },
+    {
+      "name": "Bla",
+      "description": "Blo",
+      "id": "9uEHGdYaf",
+      "coverUrl": "uploads/booksCover/2c576b442bb3d0961688e28d7d722be1",
+      "quantity": 2
+    }
+  ],
+  "users": [
+    {
+      "name": "Pham Tien Hoan",
+      "email": "phamhoan191@gmail.com",
+      "password": "$2b$10$3sJ282P5t3fvwMJZccneoewxDR230ZFW4ai2veFj/IsRbGaYDt1z2",
+      "isAdmin": true,
+      "id": "cvH7ipwk3",
+      "wrongLoginCount": 1,
+      "avatarUrl": "http://res.cloudinary.com/dxuvh5pyg/image/upload/v1593425081/to9ypgm9hfr26uwscug8.jpg"
+    },
+    {
+      "name": "Thinh",
+      "email": "info@coders.tokyo",
+      "password": "$2b$10$CPuns8ScCnbgnwbjdMhYZebVF5l0rj0/L6EY83zcIIaDYslPVGmpq",
+      "id": "H-e5ppP7D",
+      "wrongLoginCount": 0
+    },
+    {
+      "name": "Hoan",
+      "email": "hoanpham191@gmail.com",
+      "password": "$2b$10$DVdIks0ciqppmTmHorZuYO.k/LABzZAgO4.GQbUWGPdnkb5RwynSW",
+      "wrongLoginCount": 0,
+      "id": "Q50-y0PZT"
+    }
+  ],
+  "transaction": [
+    {
+      "userId": "Pham Tien Hoan",
+      "bookId": "One piece",
+      "isComplete": "false",
+      "id": "mWNbUNrWV"
+    },
+    {
+      "userId": "Thinh",
+      "bookId": "Onepunch-Man",
+      "isComplete": "false",
+      "id": "xnj0-8N9m"
+    },
+    {
+      "userId": "Thinh",
+      "bookId": "One piece",
+      "isComplete": "false",
+      "id": "SRkyq_MCS"
+    },
+    {
+      "userId": "Pham Tien Hoan",
+      "bookId": "One piece",
+      "quantity": 1,
+      "isComplete": false,
+      "id": "MPVK8UMiB"
+    },
+    {
+      "userId": "Pham Tien Hoan",
+      "bookId": "Onepunch-Man",
+      "quantity": 1,
+      "isComplete": false,
+      "id": "tgLFDuZwBB"
+    }
+  ],
+  "sessions": [
+    {
+      "id": "jNBsQjk4-",
+      "cart": {
+        "EHjWFfTRD": 1,
+        "PbYafUIzO": 1
+      }
+    },
+    {
+      "id": "xXWzHoTBN"
+    },
+    {
+      "id": "Z_dqXT-IF5"
+    },
+    {
+      "id": "0vc1Awsa8"
+    }
+  ]
+}

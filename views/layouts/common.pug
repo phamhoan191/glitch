@@ -1,0 +1,14 @@
+html
+  head
+    link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css")
+    link(rel="stylesheet" href="/custom.css")
+    link(rel="shortcut icon", type="image/png", href="https://cdn.glitch.com/24c80536-4b94-4753-9d10-59cd342a89b8%2Ffavicon.png?v=1590738916691")
+  body
+    ul.nav
+      li.nav-item
+        a.nav-link.active(href='/books') Quản lý sách
+      li.nav-item
+        a.nav-link(href='/users') Người dùng
+      li.nav-item
+        a.nav-link(href='/transaction') Giao dịch   
+    block content

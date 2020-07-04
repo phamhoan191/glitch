@@ -1,0 +1,16 @@
+extends ../layouts/common
+
+block content
+  if errors
+    .alert.alert-danger= errors
+    
+  div(class="container")
+    h1 Đăng nhập
+    form(method="POST")
+      div
+        label Email
+        input(type="email", name="email", value= values ? values.email : "")
+      div
+        label Mật khẩu
+        input(type="password", name="password", value= values ? values.password : "")
+      button Đăng nhập

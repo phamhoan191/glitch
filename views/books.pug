@@ -1,0 +1,32 @@
+extends ./layouts/common
+
+block content
+  div(class="container")
+    h1 Trang quản lý sách
+
+    form(action="/books/add", method="POST", enctype="multipart/form-data")
+      div
+        label Tên sách
+        input(type="text", name="name")
+      div
+        label Mô tả
+        input(type="text", name="description")
+      div
+        label Bìa
+        input(type="file", name="cover")
+      button Thêm
+
+    span Tất cả sách
+    ul
+      each book in books
+        li
+          img(src= book.coverUrl ? book.coverUrl : "https://res.cloudinary.com/dxuvh5pyg/image/upload/v1587441246/sample.jpg", width="64")
+          p= book.name
+          p= book.description
+          form(action="/books/" + book.id + "/edit", method="POST")
+            input(type="text", name="name")
+            button Sửa tiêu đề
+          a(href="/cart/add/" + book.id) Thêm vào giỏ
+          span &nbsp
+          a(href="/books/" + book.id + "/delete") Xóa
+    a(href="/cart/complete") Thuê
