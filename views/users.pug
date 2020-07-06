@@ -1,0 +1,38 @@
+extends ./layouts/common
+
+block content
+  if errors
+    .alert.alert-danger= errors
+  div(class="container")
+    form(action="/users/add", method="POST")
+      div
+        label Tên người dùng
+        input(type="text", name="name")
+      div
+        label Email
+        input(type="email", name="email")
+      div
+        label Mật khẩu
+        input(type="password", name="password")
+      button Thêm
+
+    each user in users
+        li
+          span= user.name
+          form(action="/users/" + user.id + "/edit", method="POST")
+            input(type="text", name="name")
+            button Sửa tên
+          a(href="/users/" + user.id + "/delete") Xóa
+          
+    nav
+      ul.pagination.justify-content-end
+          li.page-item
+              a.page-link(href='/users?page=' + (page - 1)) Previous
+          li.page-item
+              a.page-link(href='/users?page=' + (page - 1))= page - 1
+          li.page-item
+              a.page-link(href='/users?page=' + page)= page
+          li.page-item
+              a.page-link(href='/users?page=' + (page + 1))= page + 1
+          li.page-item
+              a.page-link(href='/users?page=' + (page + 1)) Next

@@ -1,0 +1,15 @@
+extends ./layouts/common
+
+block content
+  div(class="container")
+    p Thêm giao dịch mới
+    form(action="/transaction/create", method="POST")
+      select(name="userId")
+        each user in users
+          option(value= user.name)= user.name
+      select(name="bookId")
+        each book in books
+          option(value= book.name)= book.name
+      select(name="isComplete")
+        option false
+      button Create

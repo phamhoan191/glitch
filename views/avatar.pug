@@ -1,0 +1,8 @@
+extends ./layouts/common
+
+block content
+  img(src= user.avatarUrl ? user.avatarUrl : "https://res.cloudinary.com/dxuvh5pyg/image/upload/v1587441246/sample.jpg", width="64")
+  form(action="/profile/avatar", method="POST", enctype="multipart/form-data")
+      .form-group
+        input#avatar.form-control-file(type="file", name="avatar")
+        button Cập nhật

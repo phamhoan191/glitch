@@ -1,0 +1,16 @@
+extends ./layouts/common
+
+block content
+  if errors
+    .alert.alert-danger= errors
+  div(class="container")
+    a(href="/transaction/create") Giao dịch mới
+
+    p Tất cả giao dịch
+    ul
+      each item in transaction
+        li
+          p= item.userId
+          p= item.bookId
+          p= item.isComplete
+          a(href="/transaction/" + item.id + "/complete") Hoàn thành
