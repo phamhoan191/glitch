@@ -20,6 +20,10 @@ const authRoute = require('./routes/auth.route');
 const profileRoute = require('./routes/profile.route');
 const cartRoute = require('./routes/cart.route');
 
+const apiUserRoute = require('./api/routes/users.route');
+const apiAuthRoute = require('./api/routes/auth.route');
+const apiTransactionRoute = require('./api/routes/transaction.route');
+
 const authMiddleware = require('./middleware/auth.middleware');
 const sessionMiddleware = require('./middleware/session.middleware');
 const cookieCount = require('./middleware/cookie.count');
@@ -66,6 +70,12 @@ app.use('/profile', authMiddleware.userAuth, profileRoute);
 // ========================================
 
 app.use('/cart', cartRoute);
+
+app.use('/api/users', apiUserRoute);
+
+app.use('/api/login', apiAuthRoute);
+
+app.use('/api/transaction', apiTransactionRoute);
 
 // listen for requests :)
 const listener = app.listen(process.env.PORT || 3000, () => {
