@@ -21,6 +21,7 @@ const profileRoute = require('./routes/profile.route');
 const cartRoute = require('./routes/cart.route');
 
 const apiUserRoute = require('./api/routes/users.route');
+const apiBookRoute = require('./api/routes/books.route');
 const apiAuthRoute = require('./api/routes/auth.route');
 const apiTransactionRoute = require('./api/routes/transaction.route');
 
@@ -76,6 +77,8 @@ app.use('/api/users', apiUserRoute);
 app.use('/api/login', apiAuthRoute);
 
 app.use('/api/transaction', apiTransactionRoute);
+
+app.use('/api/books', apiBookRoute);
 
 // listen for requests :)
 const listener = app.listen(process.env.PORT || 3000, () => {
